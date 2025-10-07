@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccessLayer.Entities.Interactions
+namespace DataAccessLayer.Entities.Event
 {
-    public class Subscription
+    public class PublishEvent
     {
+        public int Id { get; set; }
+
     }
 }

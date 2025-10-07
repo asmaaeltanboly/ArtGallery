@@ -8,5 +8,7 @@ namespace DataAccessLayer.Entities.Content
 {
     public class Article
     {
+        public int Id { get; set; }
+
     }
 }

@@ -8,5 +8,7 @@ namespace DataAccessLayer.Entities.Interactions
 {
     public class FavouriteArtWorkStore
     {
+        public int Id { get; set; }
+
     }
 }

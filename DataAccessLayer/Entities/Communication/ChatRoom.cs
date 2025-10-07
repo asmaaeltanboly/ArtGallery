@@ -8,5 +8,6 @@ namespace DataAccessLayer.Entities.Communication
 {
     public class ChatRoom
     {
+        public int Id { get; set; } 
     }
 }

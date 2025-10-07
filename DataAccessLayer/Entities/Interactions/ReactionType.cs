@@ -6,9 +6,12 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Entities.Interactions
 {
-    public class FavouriteArtWorkGallery
+     public class ReactionType
     {
         public int Id { get; set; }
+        public string Name { get; set; }     
+        public string IconPath { get; set; } 
 
+        public ICollection<Reaction> Reactions { get; set; }
     }
 }

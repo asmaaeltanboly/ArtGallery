@@ -8,5 +8,7 @@ namespace DataAccessLayer.Entities.Orders
 {
     public class Order
     {
+        public int Id { get; set; }
+
     }
 }

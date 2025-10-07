@@ -8,5 +8,7 @@ namespace DataAccessLayer.Entities.Orders
 {
     public class Cart
     {
+        public int Id { get; set; }
+
     }
 }

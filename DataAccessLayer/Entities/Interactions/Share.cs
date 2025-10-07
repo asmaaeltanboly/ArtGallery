@@ -8,5 +8,7 @@ namespace DataAccessLayer.Entities.Interactions
 {
     public class Share
     {
+        public int Id { get; set; }
+
     }
 }

@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccessLayer.Entities.Event
+namespace DataAccessLayer.Entities.Interactions
 {
-    public class Event
+    public class Post
     {
+        public int Id { get; set; }
+
     }
 }

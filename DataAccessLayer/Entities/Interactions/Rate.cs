@@ -8,5 +8,7 @@ namespace DataAccessLayer.Entities.Interactions
 {
     public class Rate
     {
+        public int Id { get; set; }
+
     }
 }

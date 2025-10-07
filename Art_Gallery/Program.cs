@@ -1,3 +1,5 @@
+using DataAccessLayer;
+using Microsoft.EntityFrameworkCore;
 namespace Art_Gallery
 {
     public class Program
@@ -8,6 +10,8 @@ namespace Art_Gallery
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            builder.Services.AddDbContext<ArtGalleryDb>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
             var app = builder.Build();
 

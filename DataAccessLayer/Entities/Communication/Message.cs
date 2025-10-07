@@ -8,5 +8,7 @@ namespace DataAccessLayer.Entities.Communication
 {
     public class Message
     {
+        public int Id { get; set; }
+
     }
 }

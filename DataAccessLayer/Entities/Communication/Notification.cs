@@ -8,5 +8,7 @@ namespace DataAccessLayer.Entities.Communication
 {
     public class Notification
     {
+        public int Id { get; set; }
+
     }
 }

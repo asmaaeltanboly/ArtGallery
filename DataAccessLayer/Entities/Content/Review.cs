@@ -8,5 +8,7 @@ namespace DataAccessLayer.Entities.Content
 {
     public class Review
     {
+        public int Id { get; set; }
+
     }
 }
