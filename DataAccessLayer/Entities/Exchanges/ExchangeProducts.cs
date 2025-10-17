@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccessLayer.Entities.Interactions
+namespace DataAccessLayer.Entities.Exchanges
 {
-    public class FavouriteArtWorkStore
+    public class ExchangeProducts
     {
-        public int Id { get; set; }
-
+        public int Id  { get; set; }
     }
 }

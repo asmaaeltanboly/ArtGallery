@@ -1,4 +1,6 @@
 using DataAccessLayer;
+using DataAccessLayer.Entities.User;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 namespace Art_Gallery
 {
@@ -11,8 +13,9 @@ namespace Art_Gallery
             // Add services to the container.
             builder.Services.AddControllersWithViews();
             builder.Services.AddDbContext<ArtGalleryDb>(options =>
+               
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-
+            builder.Services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<ArtGalleryDb>();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

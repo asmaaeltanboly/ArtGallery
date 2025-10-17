@@ -32,7 +32,7 @@ public class ArtGalleryDb : IdentityDbContext<ApplicationUser>
     public DbSet<Rate> Rates { get; set; }
     public DbSet<Share> Shares { get; set; }
     public DbSet<FavouriteArtWorkGallery> FavouriteArtWorkGalleries { get; set; }
-    public DbSet<FavouriteArtWorkStore> FavouriteArtWorkStores { get; set; }
+    public DbSet<WishingList> WishingLists { get; set; }
     public DbSet<UserFollow> FollowersAndFollowing { get; set; }
     public DbSet<Order> Orders { get; set; }
     public DbSet<Payment> Payments { get; set; }

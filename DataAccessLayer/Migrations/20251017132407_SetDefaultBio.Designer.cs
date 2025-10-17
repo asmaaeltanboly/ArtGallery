@@ -4,6 +4,7 @@ using DataAccessLayer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataAccessLayer.Migrations
 {
     [DbContext(typeof(ArtGalleryDb))]
-    partial class ArtGalleryDbModelSnapshot : ModelSnapshot
+    [Migration("20251017132407_SetDefaultBio")]
+    partial class SetDefaultBio
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -234,6 +237,19 @@ namespace DataAccessLayer.Migrations
                     b.ToTable("FavouriteArtWorkGalleries");
                 });
 
+            modelBuilder.Entity("DataAccessLayer.Entities.Interactions.FavouriteArtWorkStore", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.HasKey("Id");
+
+                    b.ToTable("FavouriteArtWorkStores");
+                });
+
             modelBuilder.Entity("DataAccessLayer.Entities.Interactions.Post", b =>
                 {
                     b.Property<int>("Id")
@@ -331,19 +347,6 @@ namespace DataAccessLayer.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Shares");
-                });
-
-            modelBuilder.Entity("DataAccessLayer.Entities.Interactions.WishingList", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.HasKey("Id");
-
-                    b.ToTable("WishingLists");
                 });
 
             modelBuilder.Entity("DataAccessLayer.Entities.Orders.Order", b =>

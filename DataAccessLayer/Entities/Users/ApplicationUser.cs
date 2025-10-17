@@ -12,9 +12,9 @@ namespace DataAccessLayer.Entities.User
 {
     public class ApplicationUser : IdentityUser
     {
-        public string SSN { get; set; }
-        public string Bio { get; set; }
-        public string ProfileImgUrl { get; set; }
+        public string? SSN { get; set; }
+        public string Bio { get; set; } = "No bio yet";
+        public string? ProfileImgUrl { get; set; }
 
         public List<Paint> paints { get; set; }
         public List<Sculpture> Sculptures { get; set; }

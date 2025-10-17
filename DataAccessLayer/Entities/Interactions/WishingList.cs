@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Entities.Interactions
 {
-    public class FavouriteArtWorkGallery
+    public class WishingList
     {
         public int Id { get; set; }
 
     }
 }
-// دي عاوزاها تجيب كل اللوح او المنحوتات اللي اليوزر عمل عليها رياكشن لاف مثلا 
+//ليها علاقة بجزء ال store بس
